@@ -18,13 +18,13 @@
 <body>
 
     <!-- Header -->
-    <header class="head">
+    <header>
         <div class="container main-nav">
         <a class="logo" href="./index.html"><span class="logo-title">Web</span>Studio</a>
         <nav>
             <ul class="list ul-nav">
                 <li class="item-nav">
-                    <a class="nav" href="./index.html"><span class="active-link">Студия</span></a>
+                    <div class="active-page"><a class="nav" href="./index.html"><span class="active-link">Студия</span></a></div>
                 </li>
                 <li class="item-nav">
                     <a class="nav" href="./portfolio.html">Портфолио</a>
@@ -53,7 +53,16 @@
     <main>
         <section class="hero">
             <h1 class="hero-title">Эффективные решения<br> для вашего бизнеса</h1>
-            <button class="hero-button" type="button">Заказать услугу</button>
+            <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    <button class="close-button" data-modal-close>
+                        <svg class="icon-close">
+                            <use href='./images/sprite.svg#icon-close'></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </section>
 
 
@@ -109,9 +118,23 @@
         <section>
             <h2 class="section-title">Чем мы занимаемся</h2>
             <ul class="list list-description">
-                <li class="list-item"><img src="./images/box1.jpg" width="370" height="294" alt="Программирование"></li>
-                <li class="list-item"><img src="./images/box2.jpg" width="370" height="294" alt="Адаптация"></li>
-                <li class="list-item"><img src="./images/box3.jpg" width="370" height="294" alt="Дизайн"></li>
+                <li class="list-item">
+                    <div class="thumb">
+                    <img src="./images/box1.jpg" width="370" height="294" alt="Программирование">
+                <h3 class="label">Десктопные приложения</h3>
+                </div></li>
+
+                <li class="list-item">
+                <div class="thumb">
+                    <img src="./images/box2.jpg" width="370" height="294" alt="Адаптация">
+                    <h3 class="label">Мобильные приложения</h3>
+                    </div></li>
+
+                <li class="list-item">
+                    <div class="thumb">
+                        <img src="./images/box3.jpg" width="370" height="294" alt="Дизайн">
+                    <h3 class="label">Дизайнерские решения</h3>
+                    </div></li>
             </ul>
         </section>
         </div>
@@ -344,6 +367,11 @@
 </div>
 
     </footer>
+
+
+    <!-- Script for modal -->
+
+    <script src="./js/modal.js"></script>
 
 </body>
 
