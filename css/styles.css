@@ -203,10 +203,14 @@ p {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.close-button-box {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .close-button {
-  position: absolute;
-  top: 8px;
-  right: 8px;
+  margin-top: 8px;
+  margin-right: 8px;
   width: 30px;
   height: 30px;
   background-color: var(--third-color);
@@ -486,6 +490,7 @@ p {
 }
 
 .icon-button-clients {
+  display: block;
   margin: 0;
   padding: 0;
   color: #afb1b8;
